@@ -1,0 +1,113 @@
+/* Impostazioni generali per margini e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Assicura che padding e bordi non influenzino la larghezza totale degli elementi */
+}
+
+/* Stile per il corpo della pagina */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5; /* Colore di sfondo chiaro */
+    color: #333;
+}
+
+/* Stile per l'intestazione */
+header {
+    background-color: #0056b3; /* Colore di sfondo blu per l'intestazione */
+    color: #fff; /* Testo bianco */
+    padding: 20px;
+    text-align: center; /* Testo centrato */
+}
+
+h1 {
+    font-size: 24px;
+}
+
+/* Stile per il contenuto principale */
+main {
+    display: flex;
+    justify-content: center; /* Centra il contenuto orizzontalmente */
+    padding: 50px 20px;
+}
+
+/* Stile per la sezione di ricerca voli */
+#search-section {
+    background-color: #fff; /* Sfondo bianco */
+    padding: 20px;
+    border-radius: 8px; /* Angoli arrotondati */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Effetto ombra */
+    width: 100%;
+    max-width: 400px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Stile per i campi di input */
+input[type="text"],
+input[type="date"],
+input[type="number"] {
+    width: 100%; /* Campo di input a larghezza piena */
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Stile per i bottoni */
+button {
+    width: 100%; /* Bottone a larghezza piena */
+    padding: 10px;
+    background-color: #0056b3; /* Sfondo blu */
+    color: white; /* Testo bianco */
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px; /* Angoli arrotondati */
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s; /* Transizione per l'effetto hover */
+}
+
+/* Cambia colore del bottone al passaggio del mouse */
+button:hover {
+    background-color: #004494;
+}
+
+/* Stile per la sezione dei risultati */
+#results-section {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Stile per la lista dei voli */
+#flights-list {
+    margin-top: 10px;
+}
+
+/* Stile per ogni risultato del volo */
+.flight-item {
+    border-bottom: 1px solid #ccc; /* Separatore per ogni volo */
+    padding: 10px 0;
+}
+
+.flight-item:last-child {
+    border-bottom: none;
+}
+
+.flight-info {
+    font-weight: bold;
+    color: #333;
+}

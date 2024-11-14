@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ricerca Voli</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Collegamento al file CSS per stilizzare la pagina -->
+</head>
+<body>
+    <header>
+        <h1>Benvenuti al Servizio di Prenotazione VolaItalia</h1> <!-- Titolo della pagina e nome del servizio -->
+    </header>
+    
+    <main>
+        <!-- Sezione per la form di ricerca voli -->
+        <section id="search-section">
+            <h2>Ricerca Voli</h2> <!-- Sottotitolo per la sezione di ricerca voli -->
+            <form id="flight-search-form">
+                <!-- Campo per l'aeroporto di partenza -->
+                <label for="departure">Aeroporto di Partenza:</label>
+                <input type="text" id="departure" name="departure" required>
+
+                <!-- Campo per l'aeroporto di destinazione -->
+                <label for="destination">Aeroporto di Destinazione:</label>
+                <input type="text" id="destination" name="destination" required>
+
+                <!-- Campo per la data di partenza -->
+                <label for="date">Data di Partenza:</label>
+                <input type="date" id="date" name="date" required>
+
+                <!-- Campo per il numero di passeggeri -->
+                <label for="passengers">Numero di Passeggeri:</label>
+                <input type="number" id="passengers" name="passengers" min="1" required>
+
+                <button type="submit">Cerca Voli</button> <!-- Pulsante per avviare la ricerca voli -->
+            </form>
+        </section>
+
+        <!-- Sezione per visualizzare i risultati della ricerca voli -->
+        <section id="results-section">
+            <h2>Risultati della Ricerca</h2>
+            <div id="flights-list"></div> <!-- Contenitore per la lista dei voli trovati -->
+        </section>
+    </main>
+
+    <script src="script.js"></script> <!-- Collegamento al file JavaScript per gestire la ricerca -->
+</body>
+</html>

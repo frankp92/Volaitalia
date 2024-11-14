@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modifica Prenotazione</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Collegamento al file CSS per stilizzare la pagina -->
+</head>
+<body>
+    <main>
+        <section id="edit-section">
+            <h2>Modifica Prenotazione</h2> <!-- Titolo della pagina per la modifica della prenotazione -->
+
+            <!-- Form per modificare le informazioni della prenotazione -->
+            <form id="edit-form">
+                <!-- Campo per il nome completo del passeggero -->
+                <label for="name">Nome Completo:</label>
+                <input type="text" id="name" name="name" required>
+
+                <!-- Campo per l'indirizzo email del passeggero -->
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <!-- Campo per il numero di telefono del passeggero -->
+                <label for="phone">Numero di Telefono:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <!-- Pulsanti per salvare le modifiche o cancellare la prenotazione -->
+                <button type="submit">Salva Modifiche</button> <!-- Pulsante per inviare le modifiche -->
+                <button type="button" id="delete-button">Cancella Prenotazione</button> <!-- Pulsante per cancellare la prenotazione -->
+            </form>
+        </section>
+    </main>
+    <script src="edit.js"></script> <!-- Collegamento allo script per gestire la modifica della prenotazione -->
+</body>
+</html>

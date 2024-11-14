@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conferma Prenotazione</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Collegamento al file CSS per stilizzare la pagina -->
+</head>
+<body>
+    <main>
+        <section id="confirmation-section">
+            <h2>Conferma Prenotazione</h2> <!-- Titolo della pagina di conferma prenotazione -->
+
+            <div id="flight-details">
+                <!-- I dettagli del volo selezionato verranno inseriti qui tramite JavaScript -->
+            </div>
+
+            <!-- Form per l'inserimento dei dati personali del passeggero -->
+            <form id="confirmation-form">
+                <label for="name">Nome Completo:</label>
+                <input type="text" id="name" name="name" required> <!-- Campo per il nome completo -->
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required> <!-- Campo per l'indirizzo email -->
+
+                <label for="phone">Numero di Telefono:</label>
+                <input type="tel" id="phone" name="phone" required> <!-- Campo per il numero di telefono -->
+
+                <button type="submit">Conferma Prenotazione</button> <!-- Pulsante per inviare la conferma -->
+            </form>
+        </section>
+    </main>
+    <script src="confirm.js"></script> <!-- Collegamento al file JavaScript per gestire la conferma -->
+</body>
+</html>
