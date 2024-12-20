@@ -24,6 +24,7 @@ document.getElementById("confirmation-form").addEventListener("submit", function
         headers: {
             "Content-Type": "application/json"  // Specifica il tipo di contenuto come JSON
         },
+        credentials: "include",
         body: JSON.stringify(bookingData)  // Converte i dati della prenotazione in formato JSON
     })
     .then(response => response.json())  // Converte la risposta in JSON

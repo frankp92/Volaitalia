@@ -60,3 +60,56 @@ function confirmBooking(flightNumber) {
     // Reindirizza a confirm.html con il numero di volo selezionato nell'URL
     window.location.href = `confirm.html?flightNumber=${flightNumber}`;
 }
+
+document.getElementById("logout-button").addEventListener("click", function() {
+    fetch("http://127.0.0.1:5000/logout", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        credentials: "include"
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert("Logout effettuato con successo!");
+        window.location.href = "login.html"; // Reindirizza alla pagina di login
+    })
+    .catch(error => console.error("Errore durante il logout:", error));
+});
+
+// Verifica se l'utente è autenticato
+fetch("http://127.0.0.1:5000/is_authenticated", {
+    method: "GET",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    credentials: "include"  // Necessario per inviare i cookie
+})
+.then(response => response.json())
+.then(data => {
+    const authButtonsDiv = document.getElementById("auth-buttons");
+    document.addEventListener("DOMContentLoaded", function () {
+    if (data.is_authenticated) {
+        authButtonsDiv.innerHTML = `
+            <button id="logout-button">Logout</button>
+        `;
+        document.getElementById("logout-button").addEventListener("click", function() {
+            fetch("http://127.0.0.1:5000/logout", {
+                method: "POST",
+                credentials: "include",  // Necessario per inviare il cookie
+            })
+            .then(() => {
+                alert("Logout effettuato con successo!");
+                window.location.reload();
+            })
+            .catch(error => console.error("Errore durante il logout:", error));
+        });
+    } else {
+        authButtonsDiv.innerHTML = `
+            <button onclick="window.location.href='login.html'">Login</button>
+            <button onclick="window.location.href='register.html'">Registrati</button>
+        `;
+    }
+});
+})
+.catch(error => console.error("Errore durante la verifica dell'autenticazione:", error));
